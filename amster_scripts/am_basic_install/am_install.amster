@@ -1,0 +1,3 @@
+HOST = System.getProperty("HOST");
+ADMIN_PWD = System.getProperty("ADMIN_PWD");
+install-openam --serverUrl HOST --adminPwd ADMIN_PWD --acceptLicense

@@ -1,0 +1,43 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "6.0.0",
+    "entityType" : "SocialFacebook",
+    "entityId" : "7740fb82-0ac5-4747-970c-cf5946e3e9fe",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "7740fb82-0ac5-4747-970c-cf5946e3e9fe",
+    "redirectURI" : "http://openam.example.com:8080/openam",
+    "authenticationIdKey" : "id",
+    "clientId" : "aClientId",
+    "basicAuth" : true,
+    "cfgAccountProviderClass" : "org.forgerock.openam.authentication.modules.common.mapping.DefaultAccountProvider",
+    "scopeString" : "public_profile,email",
+    "cfgAccountMapperConfiguration" : {
+      "id" : "iplanet-am-user-alias-list"
+    },
+    "cfgAttributeMappingClasses" : [ "org.forgerock.openam.authentication.modules.common.mapping.JsonAttributeMapper|iplanet-am-user-alias-list|facebook-" ],
+    "issuer" : null,
+    "tokenEndpoint" : "https://graph.facebook.com/v2.12/oauth/access_token",
+    "cfgAttributeMappingConfiguration" : {
+      "name" : "cn",
+      "last_name" : "sn",
+      "id" : "iplanet-am-user-alias-list",
+      "first_name" : "givenName",
+      "email" : "mail"
+    },
+    "provider" : "facebook",
+    "cfgMixUpMitigation" : false,
+    "authorizeEndpoint" : "https://www.facebook.com/dialog/oauth",
+    "clientSecret" : null,
+    "userInfoEndpoint" : "https://graph.facebook.com/v2.6/me?fields=name%2Cemail%2Cfirst_name%2Clast_name",
+    "cfgAccountMapperClass" : "org.forgerock.openam.authentication.modules.common.mapping.JsonAttributeMapper|*|facebook-",
+    "saveUserAttributesToSession" : true,
+    "_type" : {
+      "_id" : "SocialFacebookNode",
+      "name" : "Social Facebook",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+AM_HOST = System.getProperty("AM_HOST")
+AMSTER_KEY = System.getProperty("AMSTER_KEY")
+SITE_ID = System.getProperty("SITE_ID")
+
+connect -k AMSTER_KEY AM_HOST
+:load create.amster
+:q

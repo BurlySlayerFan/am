@@ -1,0 +1,9 @@
+AM_HOST = System.getProperty("AM_HOST");
+AMSTER_KEY = System.getProperty("AMSTER_KEY")
+AM_IMPORT_PATH = System.getProperty("AM_IMPORT_PATH")
+AM_PASSWORD = System.getProperty("AM_PASSWORD");
+
+install-openam --serverUrl AM_HOST --adminPwd AM_PASSWORD --acceptLicense
+connect -k AMSTER_KEY AM_HOST
+import-config --path AM_IMPORT_PATH
+:q

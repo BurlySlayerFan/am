@@ -1,0 +1,5 @@
+create Sites --global --body '{\
+   "_id": "&{SITE_ID}",\
+   "url": "http://am.example.com:8080/openam",\
+   "secondaryURLs": []\
+}'
