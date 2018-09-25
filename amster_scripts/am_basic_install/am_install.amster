@@ -1,3 +1,6 @@
 HOST = System.getProperty("HOST");
 ADMIN_PWD = System.getProperty("ADMIN_PWD");
-install-openam --serverUrl HOST --adminPwd ADMIN_PWD --acceptLicense
+CFG_DIR = System.getProperty("CFG_DIR");
+COOKIE_DOMAIN = System.getProperty("COOKIE_DOMAIN");
+install-openam --serverUrl HOST --adminPwd ADMIN_PWD --cfgDir CFG_DIR --cookieDomain COOKIE_DOMAIN --acceptLicense
+:q

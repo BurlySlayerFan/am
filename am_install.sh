@@ -1,5 +1,5 @@
 #!/bin/bash
-export workspace="$(echo $HOME)/am/am/"
+export workspace="$(echo $HOME)/am/am"
 
 echo "Installing..."
 echo "http or https (http)?"
