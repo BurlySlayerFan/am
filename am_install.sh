@@ -36,4 +36,4 @@ cookie_domain=${cookie_domain:-"$hostname"}
 export host=$protocol://$hostname:$port/$context
 export admin_pwd
 
-$workspace/amster_6/amster $workspace/amster_scripts/am_basic_install/am_install.amster -D HOST=${host} -D ADMIN_PWD=${admin_pwd} -D CFGDIR=${cfgDir}
+$workspace/amster_6/amster $workspace/amster_scripts/am_basic_install/am_install.amster -D HOST=${host} -D ADMIN_PWD=${admin_pwd} -D CFG_DIR=${cfg_dir} -D COOKIE_DOMAIN=${cookie_domain}
