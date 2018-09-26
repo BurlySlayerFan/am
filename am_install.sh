@@ -2,6 +2,8 @@
 export workspace="$(echo $HOME)/am/am"
 
 # default installation variables
+protocol=http
+hostname=openam.example.com
 port=8080
 context="openam"
 admin_pwd="password"
