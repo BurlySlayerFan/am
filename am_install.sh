@@ -5,44 +5,44 @@ export workspace="$(echo $HOME)/am/am"
 protocol=http
 hostname=openam.example.com
 port=8080
-context="openam"
-admin_pwd="password"
+context=openam
+admin_pwd=password
 cfg_dir="$(echo $HOME/openam)"
 cookie_domain=$hostname
 
 # press enter for default installation or enter anything else to start a custom installation
-echo "Install type? (default)"
+echo "Install type? (hit enter for default install or type anything else for a custom install)"
 read install_type
 install_type=${install_type:-default}
 
 if [ $install_type != "default" ]; then
-        echo "HTTP?"
-        read protocol
-        protocol=${protocol:-http}
+        echo "Protocol ($protocol)?"
+        read response
+        protocol=${response:-$protocol}
 
-        echo "Hostname? (openam.example.com)"
-        read hostname
-        hostname=${hostname:-openam.example.com}
+        echo "Hostname? ($hostname)"
+        read response
+        hostname=${response:-$hostname}
 
-        echo "Port (8080)"
-        read port
-        port=${port:-8080}
+        echo "Port ($port)"
+        read response
+        port=${response:-$port}
 
-        echo "Context (openam)"
-        read context
-        context=${context:-openam}
+        echo "Context ($context)"
+        read response
+        context=${response:-$context}
 
-        echo "Password (password)"
-        read admin_pwd
-        admin_pwd=${admin_pwd:-password}
+        echo "Password ($admin_pwd)"
+        read response
+        admin_pwd=${response:-$admin_pwd}
 
-        echo "Config Directory ($HOME/openam)"
-        read cfg_dir
-        cfg_dir=${cfg_dir:-$(echo $HOME/openam)}
+        echo "Config Directory ($cfg_dir)"
+        read response
+        cfg_dir=${response:-$cfg_dir}
 
         echo "Cookie Domain ($hostname)"
-        read cookie_domain
-        cookie_domain=${cookie_domain:-"$hostname"}
+        read response
+        cookie_domain=${response:-$hostname}
 
         export host=$protocol://$hostname:$port/$context
         export admin_pwd
