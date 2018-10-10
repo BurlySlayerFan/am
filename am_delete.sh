@@ -8,6 +8,7 @@ while [ $? -eq 0 ]; do
 sleep 5s
 echo "Checking if tomcat is still running..."
 is_tomcat_running
+kill -9 $(cat /opt/tomcats/tomcat_0/tomcat.pid)
 done
 echo "tomcat has stopped."
 rm -rf /opt/tomcats/tomcat_0/webapps/openam*
